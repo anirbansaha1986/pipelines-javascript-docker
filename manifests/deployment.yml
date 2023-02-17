@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: anirbansahapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: anirbansahapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: anirbansahapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: anirbansahapipelinesjavascriptdocker 
+          image: mycontainerregistry2023.azurecr.io/anirbansahapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
